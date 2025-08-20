@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+/* Design tokens */
+:root {
+  --color-primary: #161C3B;
+  --color-secondary: #FF6000;
+  --color-blue: #4F6CF5;
+  --color-gray: #6C757D;
+  --color-light: #F8F9FA;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-[#FF6000] text-white px-4 py-2 rounded-lg hover:bg-[#E55A00] transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply bg-[#6C757D] text-white px-4 py-2 rounded-lg hover:bg-[#5A6268] transition-colors;
+  }
+  
+  .card {
+    @apply rounded-2xl border bg-white p-5 shadow-sm border-gray-200;
+  }
+  
+  .card-header {
+    @apply font-semibold text-[#161C3B];
+  }
+}
